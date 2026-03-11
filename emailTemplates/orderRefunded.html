@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Refund Processed</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+body {
+  margin:0;
+  padding:0;
+  background:#f4f4f4;
+  text-align:center !important;
+}
+
+.wrapper {
+  max-width:650px;
+  margin:0 auto !important;
+  background:#ffffff;
+  text-align:left;
+}
+
+.top-logo { background:#000; text-align:center; padding:20px; }
+.menu-bar { background:#DF6D62; text-align:center; padding:12px 0; }
+
+.menu-bar a {
+  color:white;
+  text-decoration:none;
+  font-size:14px;
+  font-weight:600;
+  margin:0 18px;
+  display:inline-block;
+}
+
+.section-title {
+  font-weight:700;
+  padding:15px;
+  border-bottom:2px dotted #ccc;
+  font-size:16px;
+}
+
+.item-row {
+  width:100%;
+  margin-bottom:20px;
+  border-bottom:1px solid #eee;
+  padding-bottom:12px;
+}
+
+.item-image {
+  width:100px;
+  height:auto;
+  border-radius:6px;
+}
+
+.item-title {
+  font-size:15px;
+  font-weight:600;
+  color:#000;
+  text-decoration:none;
+}
+
+.item-price {
+  font-size:16px;
+  font-weight:700;
+  text-align:right;
+}
+
+@media (max-width:480px){
+  .item-image{width:80px;}
+  .item-price{font-size:14px;}
+}
+</style>
+</head>
+
+<body>
+
+<table width="100%" cellpadding="0" cellspacing="0" style="background:#f4f4f4">
+
+<tr>
+<td align="center">
+
+<table width="650" cellpadding="0" cellspacing="0" style="background:#ffffff">
+
+<!-- HEADER -->
+<tr>
+<td class="top-logo">
+<img src="https://cdn11.bigcommerce.com/s-jlmaubflvk/images/stencil/original/image-manager/venue-white-logo.png" width="160">
+</td>
+</tr>
+
+<!-- MENU -->
+<tr>
+<td class="menu-bar">
+<a href="{{ordersLink}}">Your Orders</a>
+<a href="{{accountLink}}">Your Account</a>
+<a href="{{buyAgainLink}}">Buy Again</a>
+</td>
+</tr>
+
+<!-- MESSAGE -->
+<tr>
+<td style="padding:25px;text-align:center;font-size:20px;font-weight:600;">
+Refund Processed for Your Order
+</td>
+</tr>
+
+<tr>
+<td style="padding:0 20px 15px;text-align:center;font-size:14px;color:#555;">
+Hello <b>{{customerName}}</b>, your refund has been successfully processed.
+</td>
+</tr>
+
+<tr>
+<td style="padding:0 20px 20px;text-align:center;font-size:13px;color:#777;">
+The refunded amount will be returned through the original payment method or store credit depending on the refund method.
+</td>
+</tr>
+<!-- REFUND REASON -->
+<tr>
+<td class="section-title">Refund Reason</td>
+</tr>
+
+<tr>
+<td style="padding:15px;font-size:14px;line-height:22px;">
+{{refundReason}}
+</td>
+</tr>
+<!-- ORDER NUMBER -->
+<tr>
+<td class="section-title">Order #{{orderId}}</td>
+</tr>
+
+<tr>
+<td style="padding:10px 20px;font-size:13px;color:#555;">
+Ordered on <b>{{orderDate}}</b> at <b>{{orderTime}}</b>
+</td>
+</tr>
+
+<!-- BILLING ADDRESS -->
+<tr>
+<td class="section-title">Billing Address</td>
+</tr>
+
+<tr>
+<td style="padding:15px;font-size:14px;line-height:22px;">
+{{billingAddress}}
+</td>
+</tr>
+
+<!-- PRODUCT SUMMARY -->
+<tr>
+<td class="section-title">
+<table width="100%">
+<tr>
+<td><b>Refunded Items</b></td>
+<td align="right">
+<a href="{{reviewOrderLink}}" style="background:#009291;color:white;padding:6px 16px;border-radius:20px;font-size:12px;text-decoration:none;">
+View Order
+</a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+
+<tr>
+<td style="padding:15px">
+{{items}}
+</td>
+</tr>
+
+<!-- TOTAL -->
+<tr>
+<td style="padding:15px">
+
+<hr style="border:0;border-top:2px dotted #ccc;margin:5px 0">
+
+<table width="100%" style="font-size:15px">
+
+<tr>
+<td align="right">Refund Total:</td>
+<td align="right" style="font-weight:700">
+${{orderTotal}}
+</td>
+</tr>
+
+<tr>
+<td align="right">Payment Method:</td>
+<td align="right" style="font-weight:600">
+{{paymentMethod}}
+</td>
+</tr>
+
+<tr>
+<td align="right">Shipping Method:</td>
+<td align="right" style="font-weight:600">
+{{shippingMethod}}
+</td>
+</tr>
+
+</table>
+
+</td>
+</tr>
+
+<!-- SHIPPING ADDRESS -->
+<tr>
+<td class="section-title">Delivery Address</td>
+</tr>
+
+<tr>
+<td style="padding:15px;font-size:14px;">
+{{shippingAddress}}
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<!-- SUPPORT -->
+<tr>
+<td style="padding:30px 15px;text-align:center;font-size:14px;color:#666">
+
+Questions about your refund?<br>
+
+Contact us at
+
+<a href="mailto:support@venuemarketplace.com" style="color:#1a73e8;text-decoration:none;font-weight:500">
+support@venuemarketplace.com
+</a>
+
+</td>
+</tr>
+
+</table>
+
+</td>
+</tr>
+
+</table>
+
+</body>
+</html>
