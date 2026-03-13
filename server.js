@@ -8,9 +8,9 @@ const path = require("path");
 const app = express();
 app.use(bodyParser.json());
 
-const storeHash = "jlmaubflvk";
-const clientId = "dtb2sgkh1zpcxzdgu0ly7a16so2mp3u";
-const accessToken = "gft8y3fgyxnat4i4zj852f7lpdtnyvj";
+const storeHash = "";
+const clientId = "";
+const accessToken = "";
 
 const v3Headers = {
   "X-Auth-Client": clientId,
