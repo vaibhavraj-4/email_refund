@@ -1,8 +1,8 @@
 const axios = require("axios");
 
-const storeHash = "jlmaubflvk";
-const clientId = "dtb2sgkh1zpcxzdgu0ly7a16so2mp3u";
-const accessToken = "gft8y3fgyxnat4i4zj852f7lpdtnyvj";
+const storeHash = "";
+const clientId = "";
+const accessToken = "";
 
 const destinationUrl = "https://e164-2405-201-4018-90a7-c840-b9d4-294c-1802.ngrok-free.app/order-events";
 
